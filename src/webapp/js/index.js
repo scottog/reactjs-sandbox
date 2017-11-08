@@ -3,6 +3,7 @@ import React from 'react';
 import JabberwockyCreation from './jabberwockyCreation.js';
 import JabberwockySummary from './jabberwockySummary.js';
 import ExclusionToolBar from './exclusionBar.js';
+import AppHeader from './AppHeader.js';
 
 import cx from 'classnames';
 
@@ -13,6 +14,7 @@ class App extends React.Component {
 	render() {
 		return (
 		<div>
+			<AppHeader appName="Exam Destinations" />
 			<JabberwockyCreation />
 
 			<hr />

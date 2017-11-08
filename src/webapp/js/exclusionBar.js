@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './../css/index.css';
+import cx from 'classnames';
 
 function SubmitButton(props) {
+    var classes = cx('button button--primary',{
+        "submitButtonPressed" : props.value
+    });
+
     return (
-        <button className={props.value ? "submitButtonPressed" : "toolButton"}
-                onClick={() => props.onClick()}>
-            {props.value ? 'Pending' : 'Submit for Appoval'}
-        </button>
+    <button className={classes}
+    onClick={() => props.onClick()}>
+    {props.value ? 'Pending' : 'Submit for Approval'}
+    </button>
     );
 }
 
 function EditButton(props) {
     return (
-        <button className="toolButton"
+        <button className="button button--secondary"
                 onClick={() => props.onClick()}>
             Edit Exclusion
         </button>
@@ -23,7 +27,7 @@ function EditButton(props) {
 
 function DeleteButton(props) {
     return (
-        <button className="toolButton"
+        <button className="button button--secondary"
                 onClick={() => props.onClick()}>
             Delete Exclusion
         </button>

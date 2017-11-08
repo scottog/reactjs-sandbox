@@ -1,0 +1,38 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/8.5.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@5.5.1
+3 info using node@v8.5.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle reactjs@1.0.0~prestart: reactjs@1.0.0
+6 info lifecycle reactjs@1.0.0~start: reactjs@1.0.0
+7 verbose lifecycle reactjs@1.0.0~start: unsafe-perm in lifecycle true
+8 verbose lifecycle reactjs@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/joshuafernandes/Desktop/ED Hackathon/git/reactjs-sandbox/src/webapp/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+9 verbose lifecycle reactjs@1.0.0~start: CWD: /Users/joshuafernandes/Desktop/ED Hackathon/git/reactjs-sandbox/src/webapp
+10 silly lifecycle reactjs@1.0.0~start: Args: [ '-c', 'webpack-dev-server --open' ]
+11 silly lifecycle reactjs@1.0.0~start: Returned: code: 1  signal: null
+12 info lifecycle reactjs@1.0.0~start: Failed to exec start script
+13 verbose stack Error: reactjs@1.0.0 start: `webpack-dev-server --open`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:280:16)
+13 verbose stack     at emitTwo (events.js:125:13)
+13 verbose stack     at EventEmitter.emit (events.js:213:7)
+13 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+13 verbose stack     at emitTwo (events.js:125:13)
+13 verbose stack     at ChildProcess.emit (events.js:213:7)
+13 verbose stack     at maybeClose (internal/child_process.js:927:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+14 verbose pkgid reactjs@1.0.0
+15 verbose cwd /Users/joshuafernandes/Desktop/ED Hackathon/git/reactjs-sandbox/src/webapp
+16 verbose Darwin 16.7.0
+17 verbose argv "/usr/local/Cellar/node/8.5.0/bin/node" "/usr/local/bin/npm" "start"
+18 verbose node v8.5.0
+19 verbose npm  v5.5.1
+20 error code ELIFECYCLE
+21 error errno 1
+22 error reactjs@1.0.0 start: `webpack-dev-server --open`
+22 error Exit status 1
+23 error Failed at the reactjs@1.0.0 start script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]
