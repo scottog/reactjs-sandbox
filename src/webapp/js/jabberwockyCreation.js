@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './../css/index.css';
 import cx from 'classnames';
 
-class JabberwockyCreation extends React.Component {
+export default class JabberwockyCreation extends React.Component {
    render () {
      //something
 
@@ -36,10 +36,3 @@ class JabberwockyCreation extends React.Component {
      )
    }
 }
-
-// ========================================
-
-ReactDOM.render(
-    <JabberwockyCreation type="DestinationConfiguration" name="Rule"/>,
-    document.getElementById('root')
-);

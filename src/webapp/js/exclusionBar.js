@@ -31,7 +31,7 @@ function DeleteButton(props) {
 
 }
 
-class ToolBar extends React.Component {
+export default class ExclusionToolBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -63,7 +63,7 @@ class ToolBar extends React.Component {
         return (
             <SubmitButton value={this.state.submitted}
                           onClick={() => this.handleSubmitClick(i)}
-            />
+                />
         );
     }
 
@@ -71,25 +71,25 @@ class ToolBar extends React.Component {
         return (
             <EditButton value={this.state.submitted}
                         onClick={() => this.openEditModal(i)}
-            />
+                />
         );
     }
 
     renderDelete(i) {
         return (
             <DeleteButton value={this.state.submitted}
-                        onClick={() => this.openDeleteModal(i)}
-            />
+                          onClick={() => this.openDeleteModal(i)}
+                />
         );
     }
 
     render() {
         return (
-                <div className="board-row">
-                    {this.renderSubmit(0)}
-                    {this.renderEdit(1)}
-                    {this.renderDelete(2)}
-                </div>
+            <div className="board-row">
+                {this.renderSubmit(0)}
+                {this.renderEdit(1)}
+                {this.renderDelete(2)}
+            </div>
         );
     }
 }
@@ -109,10 +109,3 @@ class Page extends React.Component {
         );
     }
 }
-
-// ========================================
-
-ReactDOM.render(
-    <Page />,
-    document.getElementById('root')
-);

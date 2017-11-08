@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './../css/index.css';
 import cx from 'classnames';
 
-class JabberwockySummary extends React.Component {
+export default class JabberwockySummary extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -34,10 +34,3 @@ class JabberwockySummary extends React.Component {
      )
    }
 }
-
-// ========================================
-
-ReactDOM.render(
-    <JabberwockySummary activationDate="now" deactivationDate="later" name="SnickerSnack"/>,
-    document.getElementById('root')
-);
