@@ -4,6 +4,7 @@ import JabberwockyCreation from './jabberwockyCreation.js';
 import JabberwockySummary from './jabberwockySummary.js';
 import ExclusionToolBar from './exclusionBar.js';
 import AppHeader from './AppHeader.js';
+import SectionHeader from './sectionHeader.js';
 
 import cx from 'classnames';
 
@@ -15,6 +16,7 @@ class App extends React.Component {
 		return (
 		<div>
 			<AppHeader appName="Exam Destinations" />
+			<SectionHeader name="Rule Name #22" activationDate="08/01/2017" deactivationDate="11/31/2017"/>
 			<JabberwockyCreation />
 
 			<hr />
