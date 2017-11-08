@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import cx from 'classnames';
 
-export default class JabberwockyCalendar extends React.Component {
-
+class CalendarItem extends React.Component {
   render() {
     var classes = cx({
       "calendarItemDestConfig" : this.props.type == "DestinationConfiguration",
@@ -22,6 +21,22 @@ export default class JabberwockyCalendar extends React.Component {
             <b>De-activation Date:&nbsp;</b>
             {this.props.deactivationDate}
           </p>
+        </div>
+    )
+  }
+}
+
+export default class JabberwockyCalendar extends React.Component {
+
+  render() {
+    return (
+        <div>
+          {this.props.jabberwockies.map(function (jabberwocky) {
+            return <CalendarItem type={jabberwocky.type} name={jabberwocky.name}
+                                 activationDate={jabberwocky.activationDate}
+                                 deactivationDate={jabberwocky.deactivationDate}/>
+          })
+          }
         </div>
     )
   }
