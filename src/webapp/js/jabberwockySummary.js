@@ -15,7 +15,7 @@ export default class JabberwockySummary extends React.Component {
    render () {
      //something
     var classes = cx({
-      "summarySelected" : this.state.selected,
+      "summarySelected" : this.props.selected,
       "summary" : true
     });
 
