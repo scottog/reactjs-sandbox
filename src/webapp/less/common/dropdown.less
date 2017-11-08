@@ -1,0 +1,102 @@
+@dropdown-arrow-size: 1rem;
+@dropdown-bg: @gray-lightest;
+@dropdown-border: @gray-light;
+@dropdown-border-radius: 3px;
+@dropdown-menu-offset: .8rem;
+
+.dropdown {
+  display: inline-flex;
+  max-width: 100%;
+  position: relative;
+  vertical-align: middle;
+
+  .dropdown__trigger {
+    display: flex;
+    min-height: 3rem;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: @gray-lightest;
+      color: @black;
+    }
+
+    .dropdown__trigger--label {
+      align-self: center;
+      margin: 0 1rem;
+
+      i {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .dropdown__menu {
+    background-color: @dropdown-bg;
+    border: 1px solid @dropdown-border;
+    border-radius: @dropdown-border-radius;
+    opacity: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: ~'calc(100% + @{dropdown-menu-offset})';
+    transform: translateY(-@dropdown-menu-offset) scale(.75);
+    transform-origin: left top;
+    z-index: 1040;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    max-width: 22rem;
+
+    &::before {
+      background: @dropdown-bg;
+      border: 1px solid @dropdown-border;
+      border-bottom-left-radius: @dropdown-border-radius;
+      border-right: 0;
+      border-top: 0;
+      content: '';
+      height: @dropdown-arrow-size;
+      left: @dropdown-arrow-size;
+      position: absolute;
+      top: (-@dropdown-arrow-size / 2);
+      transform: rotate(135deg);
+      width: @dropdown-arrow-size;
+    }
+
+    &:not(.dropdown__menu--top)::before {
+      margin-top: -0.1rem;
+    }
+
+    &.dropdown__menu--top::before {
+      margin-bottom: -0.1rem;
+    }
+
+    &.dropdown__menu--open {
+      display: block;
+      opacity: 1;
+    }
+
+    .dropdown__menu__item {
+      padding: .5rem 1rem;
+
+      &:hover {
+        background-color: @blue-lightest;
+      }
+
+      .dropdown__menu__item__link {
+        color: @black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.dropdown__menu--right {
+  left: auto !important;
+  right: 0 !important;
+  transform-origin: right top !important;
+
+  &::before {
+    left: auto !important;
+    right: @dropdown-arrow-size !important;
+  }
+}

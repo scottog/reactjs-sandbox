@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './../css/index.css';
 
 function SubmitButton(props) {
     return (
@@ -9,7 +9,6 @@ function SubmitButton(props) {
             {props.value ? 'Pending' : 'Submit for Appoval'}
         </button>
     );
-
 }
 
 function EditButton(props) {
