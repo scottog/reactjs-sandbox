@@ -2,6 +2,7 @@
 coverage
 build
 dist
+target
 node_modules
 stats.json
 
