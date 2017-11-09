@@ -6,21 +6,26 @@ import cx from 'classnames';
 export default class JabberwockySummary extends React.Component {
   constructor(props) {
       super(props);
-      this.state = {
-        selected : false
-      };
+      this.state = ({
+        selected : this.props.selected
+      });
   }
 
+  handleSelect(){
+    this.setState({
+      selected : true
+    });
+  }
 
    render () {
      //something
     var classes = cx({
-      "summarySelected" : this.props.selected,
+      "summarySelected" : this.state.selected,
       "smallSummary" : true
     });
 
      return (
-       <div className={classes}>
+       <div className={classes} onClick={() => this.handleSelect()}>
             <h3>
                 {this.props.name}
             </h3>
