@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './../css/index.css';
+import './index.css';
 import cx from 'classnames';
 
-export default class JabberwockyCreation extends React.Component {
+class JabberwockyCreation extends React.Component {
    render () {
      //something
 
      return (
-       <div className="row tab">
+       <div className="row">
             <div id="jabberwockyName" className="col-xs-12">
                 <label for={"name-" + this.props.name +"-"+ this.props.id}>{this.props.name} Name:</label>
                 <br />
@@ -36,3 +36,10 @@ export default class JabberwockyCreation extends React.Component {
      )
    }
 }
+
+// ========================================
+
+ReactDOM.render(
+    <JabberwockyCreation type="DestinationConfiguration" name="Rule"/>,
+    document.getElementById('root')
+);

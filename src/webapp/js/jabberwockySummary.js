@@ -16,7 +16,7 @@ export default class JabberwockySummary extends React.Component {
      //something
     var classes = cx({
       "summarySelected" : this.props.selected,
-      "summary" : true
+      "smallSummary" : true
     });
 
      return (
@@ -27,6 +27,7 @@ export default class JabberwockySummary extends React.Component {
             <p>
                 Activation Date: {this.props.activationDate}
             </p>
+            <br/>
             <p>
                 Deactivation Date: {this.props.deactivationDate}
             </p>
